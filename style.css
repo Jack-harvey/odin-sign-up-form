@@ -1,0 +1,21 @@
+@import "modern-normalize.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  height: 4rem;
+  background-color: antiquewhite;
+}
+
+footer {
+  height: 2rem;
+  background-color: antiquewhite;
+}
+
+main {
+  flex: 1;
+}
