@@ -8,22 +8,31 @@
 
 :root {
   --visual-width: 30rem;
+
+  --dark-base-color: #303446;
+  --dark-crust-color: #232634;
+  --dark-surface0-color: #414559;
+  --dark-red-color: #e78284;
+  --dark-blue-color: #8caaee;
+  --dark-font-color: #c6d0f5;
 }
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--dark-base-color);
+  color: var(--dark-font-color);
 }
 
 header {
   height: 4rem;
-  background-color: antiquewhite;
+  background-color: var(--dark-surface0-color);
 }
 
 footer {
   height: 2rem;
-  background-color: antiquewhite;
+  background-color: var(--dark-surface0-color);
 }
 
 main {
@@ -81,8 +90,11 @@ main > div.visual {
 
 main > form {
   flex: 1;
-  background-color: aquamarine;
-  padding-left: 2.5rem;
+  background-color: var(--dark-base-color);
+}
+
+form > * {
+  margin-left: 2.5rem;
 }
 
 div.top-text {
@@ -92,10 +104,11 @@ div.top-text {
 }
 
 .fields {
-  background-color: red;
+  background-color: var(--dark-surface0-color);
   display: flex;
   flex-wrap: wrap;
-  box-shadow: 0 4px 2px -2px black;
+  box-shadow: 0 4px 2px -2px var(--dark-crust-color);
+  margin-left: 0rem;
 }
 
 input {
@@ -112,7 +125,29 @@ label {
 
 .fields > div {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.fields > div > h2 {
+  margin-left: 2.5rem;
+}
+
+.fields > div > div {
+  display: flex;
   flex-direction: column;
   width: 30ch;
-  margin: 1rem 2.2rem;
+  margin: 1rem 2.5rem;
+}
+
+button {
+  padding: 0.75rem 2rem;
+  border-radius: 7px;
+}
+
+.create-account {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  background-color: var(--dark-blue-color);
+  color: var(--dark-crust-color);
+  font-weight: bold;
 }
