@@ -9,11 +9,11 @@
 :root {
   --visual-width: 30rem;
 
-  --dark-base-color: #303446;
-  --dark-crust-color: #232634;
-  --dark-surface0-color: #414559;
+  --dark-base-color: #24273a;
+  --dark-crust-color: #181926;
+  --dark-surface0-color: #292c3c;
   --dark-red-color: #e78284;
-  --dark-blue-color: #8caaee;
+  --dark-blue-color: #81c8be;
   --dark-font-color: #c6d0f5;
 }
 
@@ -21,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--dark-base-color);
+  background-color: var(--dark-crust-color);
   color: var(--dark-font-color);
 }
 
@@ -58,7 +58,7 @@ main > div.visual {
   margin-top: 15rem;
   width: var(--visual-width);
   height: 8rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(35, 38, 52, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,18 +66,20 @@ main > div.visual {
 
   img {
     height: 8rem;
+    filter: invert(81%) sepia(27%) saturate(367%) hue-rotate(194deg)
+      brightness(98%) contrast(96%);
   }
 
   p {
     font-family: NorseBold;
     font-size: 5rem;
-    color: white;
+    color: var(--dark-font-color);
   }
 }
 
 .img-credit {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(35, 38, 52, 0.7);
   color: white;
   margin: 0;
   font-size: 0.9rem;
@@ -146,8 +148,12 @@ button {
 
 .create-account {
   margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background-color: var(--dark-blue-color);
   color: var(--dark-crust-color);
   font-weight: bold;
+}
+
+.login-link {
+  margin-top: 0rem;
 }
