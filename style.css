@@ -55,7 +55,7 @@ main > div.visual {
 }
 
 .logo-banner {
-  margin-top: 15rem;
+  margin-top: 11.9rem;
   width: var(--visual-width);
   height: 8rem;
   background-color: rgba(35, 38, 52, 0.7);
@@ -117,12 +117,16 @@ input {
   width: 30ch;
   height: 2rem;
   border-radius: 5px;
+  background-color: var(--dark-surface0-color);
+  border-color: var(--dark-crust-color);
+  color: var(--dark-font-color);
 }
 
 label {
   text-transform: uppercase;
   font-size: 0.8rem;
   margin-left: 2px;
+  margin-bottom: 2px;
 }
 
 .fields > div {
@@ -156,4 +160,9 @@ button {
 
 .login-link {
   margin-top: 0rem;
+}
+
+footer {
+  text-align: center;
+  padding-top: 7px;
 }
