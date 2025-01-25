@@ -9,30 +9,39 @@
 :root {
   --visual-width: 30rem;
 
-  --dark-base-color: #24273a;
-  --dark-crust-color: #181926;
-  --dark-surface0-color: #292c3c;
-  --dark-red-color: #e78284;
-  --dark-blue-color: #81c8be;
-  --dark-font-color: #c6d0f5;
+  --base-color: #24273a;
+  --crust-color: #181926;
+  --mantle-color: #292c3c;
+  --error-color: #e78284;
+  --accent-color: #81c8be;
+  --font-color: #c6d0f5;
+}
+
+:root:has(#light-mode:checked) {
+  --base-color: #eff1f5;
+  --crust-color: #dce0e8;
+  --mantle-color: #e6e9ef;
+  --error-color: #d20f39;
+  --accent-color: #179299;
+  --font-color: #4c4f69;
 }
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--dark-crust-color);
-  color: var(--dark-font-color);
+  background-color: var(--crust-color);
+  color: var(--font-color);
 }
 
 header {
   height: 4rem;
-  background-color: var(--dark-surface0-color);
+  background-color: var(--mantle-color);
 }
 
 footer {
   height: 2rem;
-  background-color: var(--dark-surface0-color);
+  background-color: var(--mantle-color);
 }
 
 main {
@@ -73,7 +82,7 @@ main > div.visual {
   p {
     font-family: NorseBold;
     font-size: 5rem;
-    color: var(--dark-font-color);
+    color: #c6d0f5;
   }
 }
 
@@ -92,7 +101,7 @@ main > div.visual {
 
 main > form {
   flex: 1;
-  background-color: var(--dark-base-color);
+  background-color: var(--base-color);
 }
 
 form > * {
@@ -106,10 +115,10 @@ div.top-text {
 }
 
 .fields {
-  background-color: var(--dark-surface0-color);
+  background-color: var(--mantle-color);
   display: flex;
   flex-wrap: wrap;
-  box-shadow: 0 4px 2px -2px var(--dark-crust-color);
+  box-shadow: 0 4px 2px -2px var(--crust-color);
   margin-left: 0rem;
 }
 
@@ -117,9 +126,9 @@ input {
   width: 30ch;
   height: 2rem;
   border-radius: 5px;
-  background-color: var(--dark-surface0-color);
-  border-color: var(--dark-crust-color);
-  color: var(--dark-font-color);
+  background-color: var(--mantle-color);
+  border-color: var(--crust-color);
+  color: var(--font-color);
 }
 
 label {
@@ -153,8 +162,8 @@ button {
 .create-account {
   margin-top: 3rem;
   margin-bottom: 1.5rem;
-  background-color: var(--dark-blue-color);
-  color: var(--dark-crust-color);
+  background-color: var(--accent-color);
+  color: var(--crust-color);
   font-weight: bold;
 }
 
@@ -164,7 +173,7 @@ button {
 
 .login-link > a {
   font-weight: bold;
-  color: var(--dark-blue-color);
+  color: var(--accent-color);
 }
 
 footer {
@@ -173,15 +182,15 @@ footer {
 }
 
 input:invalid {
-  border: 2px solid var(--dark-red-color);
+  border: 2px solid var(--error-color);
 }
 
 input:valid {
-  border: 2px solid var(--dark-crust-color);
+  border: 2px solid var(--crust-color);
 }
 
 .no-validation:invalid {
-  border: 2px solid var(--dark-crust-color);
+  border: 2px solid var(--crust-color);
 }
 
 a:hover,
