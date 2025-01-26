@@ -209,6 +209,11 @@ input:valid {
   border: 2px solid var(--crust-color);
 }
 
+input:focus {
+  outline: 2px solid var(--accent-color);
+  border: none;
+  box-shadow: 0 4px 2px -2px var(--crust-color);
+}
 a:hover,
 button:hover {
   cursor: pointer;
